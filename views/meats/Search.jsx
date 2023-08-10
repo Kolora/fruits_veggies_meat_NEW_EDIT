@@ -3,18 +3,18 @@ import React from "react";
 // data is sent as ?name=bob&color=red&ready=true
 // id matches the htmlFor in the label - name matches the key we send the data as
 
-export default function New() {
+export default function Search() {
   return (
     <div>
-      <h1>New</h1>
-      <form action="/fruits" method="POST">
+      <h1>Search</h1>
+      <form action={`/meats/filter`} method="GET">
         <label htmlFor="name">Name:</label> <br />
         <input type="text" id="name" name="name"></input> <br />
         <br />
         <br />
-        <label htmlFor="color">Color:</label>
+        <label htmlFor="state">State:</label>
         <br />
-        <input type="text" id="color" name="color"></input> <br />
+        <input type="text" id="state" name="state"></input> <br />
         <br />
         <br />
         <label htmlFor="ready">Ready to Eat:</label>
@@ -22,10 +22,10 @@ export default function New() {
         <br />
         <br />
         <br />
-        <button>Submit</button>
+        <button>Search</button>
       </form>
 
-      <form action="/fruits">
+      <form action="/meats">
         <button>Back</button>
       </form>
     </div>

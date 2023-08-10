@@ -17,6 +17,10 @@ function Index(props) {
         </div>
       ))}
 
+      <form action="/fruits/search">
+        <button>Search</button>
+      </form>
+
       <form action="/fruits/new">
         <button>New</button>
       </form>

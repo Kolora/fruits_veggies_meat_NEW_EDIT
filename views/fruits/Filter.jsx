@@ -14,6 +14,10 @@ function Filter({ filtered }) {
           <hr />
         </div>
       ))}
+
+      <form action="/fruits/search">
+        <button>Back</button>
+      </form>
     </div>
   );
 }

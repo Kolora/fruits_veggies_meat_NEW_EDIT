@@ -3,11 +3,11 @@ import React from "react";
 // data is sent as ?name=bob&color=red&ready=true
 // id matches the htmlFor in the label - name matches the key we send the data as
 
-export default function New() {
+export default function Search() {
   return (
     <div>
-      <h1>New</h1>
-      <form action="/fruits" method="POST">
+      <h1>Search</h1>
+      <form action={`/vegetables/filter`} method="GET">
         <label htmlFor="name">Name:</label> <br />
         <input type="text" id="name" name="name"></input> <br />
         <br />
@@ -22,10 +22,10 @@ export default function New() {
         <br />
         <br />
         <br />
-        <button>Submit</button>
+        <button>Search</button>
       </form>
 
-      <form action="/fruits">
+      <form action="/vegetables">
         <button>Back</button>
       </form>
     </div>
