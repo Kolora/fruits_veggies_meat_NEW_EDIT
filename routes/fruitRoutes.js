@@ -1,32 +1,36 @@
-const express = require("express");
+const express = require('express')
+
 
 // Create our router
-const router = express.Router();
+const router = express.Router()
 
 // Bring in our controller logic
-const fruitController = require("../controllers/fruitController");
+const fruitController = require('../controllers/fruitController')
 
-// I.N.D.U.C.E.S (Index, New, Destroy, Update, Create, Edit, Show)
+// to organize routes  I.N.D.U.C.E.S (index, new, destroy, update, create, edit, show)
 
 // "index" route      //   localhost:8080/fruits/
-router.get("/", fruitController.index);
+router.get('/', fruitController.index)
 
-// "new" route
-router.get("/new", fruitController.new);
+//  "new" route   //   localhost:8080/fruits/new
+router.get('/new', fruitController.new)
 
-// "destroy" route
-router.delete("/:indexOfFruit", fruitController.destroy);
+//  "destroy" route
+router.delete('/:indexOfFruit', fruitController.destroy)
 
-// "update" route
-router.put("/:indexOfFruit", fruitController.update);
+//  "update" route
+router.put('/:indexOfFruit', fruitController.update)
 
-// "create" route
-router.post("/", fruitController.create);
+//  "filter" route     //   localhost:8080/fruits/filter
+router.get('/filter', fruitController.filter)
 
-// "edit" route
-router.get("/:indexOfFruit/edit", fruitController.edit);
+//  "create" route
+router.post('/', fruitController.create)
 
-// "show" route      //   localhost:8080/fruits/:indexOfFruit
-router.get("/:indexOfFruit", fruitController.show);
+//  "edit" route
+router.get('/:indexOfFruit/edit', fruitController.edit)
 
-module.exports = router;
+//  "show" route      //   localhost:8080/fruits/:indexOfFruit
+router.get('/:indexOfFruit', fruitController.show)
+
+module.exports = router
